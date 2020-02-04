@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { BlankTemplateComponent } from "./template/blank-template.component";
@@ -9,6 +10,9 @@ import { PageNotFoundComponent } from "./page-not-found/page-not-found.component
 import { HeaderComponent } from "./shared/header/header.component";
 import { NavigationComponent } from "./shared/navigation/navigation.component";
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -21,8 +25,12 @@ import { LoginComponent } from './login/login.component';
     LoginComponent
   ],
   imports: [
+    ToastrModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes, { useHash: true })
   ],
   providers: [],
