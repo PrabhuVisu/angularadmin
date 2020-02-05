@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import * as config from '../../config.json';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  companyLogo: string;
 
   constructor(
     public router: Router,
@@ -18,6 +20,7 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.companyLogo = config[0]["companyLogo"];
   }
 
   onLoggedin(username: any, password: any) {

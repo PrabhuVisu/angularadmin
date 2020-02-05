@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ConstNameService} from '../../../services/const-name.service';
+import * as config from '../../../config.json';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,7 @@ import {ConstNameService} from '../../../services/const-name.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  logo: string;
   username: string;
   url: string;
 
@@ -16,6 +18,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.username = localStorage.getItem('firstname');
+    this.logo = config[0]["dashboardLogo"];
     this.url = this.constName.baseImage.file_img_url;
   }
 

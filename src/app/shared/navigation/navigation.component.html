@@ -9,7 +9,7 @@
              /input-group
         </li>    -->
         <li class="user-pro">
-            <a href="#" class="text-center">
+            <a class="text-center">
                 <div class="profile-img">
                     <img src="https://dev.dwp.firstqa.com/server/common/api/v7/userProfileImage/get?loginName={{loginname}}"/>
                 </div>
@@ -20,11 +20,14 @@
             </a>
         </li>
         <li><a [routerLink]="['/dashboard']" [routerLinkActive]="['active']" class="waves-effect"><i class="fa fa-home"></i> <span
-                class="hide-menu">Dashboard</span></a></li>
-        <!-- <li class=""><a href="javascript:void(0);" class="waves-effect"><i class="fa fa-envelope-o"></i> <span
-                class="hide-menu"> Mailbox <span class="fa arrow"></span><span
-                class="label label-rouded label-danger pull-right">6</span></span></a>
-        </li> -->
+                class="hide-menu">Dashboard</span></a>
+        </li>
+        <li>
+            <a [routerLink]="['/ui-elements']" [routerLinkActive]="['active']">
+                <i class="fa fa-inbox"></i>
+                <span class="hide-menu">My Inbox</span>
+            </a>
+        </li>
         <li>
             <a [routerLink]="['/ui-elements']" [routerLinkActive]="['active']">
                 <i class="fa fa-edit"></i>

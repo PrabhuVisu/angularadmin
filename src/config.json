@@ -1,0 +1,8 @@
+[
+    {
+        "companyLogo":"assets/images/First-QA-Logo.png",
+        "loginAPI":"https://dev.dwp.firstqa.com/server/user/api/v6.6/auth/login.json",
+
+        "dashboardLogo":"assets/images/logo.png"
+    }
+]

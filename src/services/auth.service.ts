@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Router } from '@angular/router';
+import * as config from '../config.json';
 
 @Injectable()
 export class AuthenticationService {
@@ -15,14 +16,14 @@ export class AuthenticationService {
     formData.append('password', password);
     console.log(username);
     console.log(password);
+    console.log(config[0]["loginAPI"]);
     const headers = new HttpHeaders()
       .set('Content-Type', 'text/xml')
       .append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS')
       .append('Access-Control-Allow-Origin', '*')
-      // tslint:disable-next-line:max-line-length
       .append('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Access-Control-Allow-Origin, Access-Control-Request-Method');
-    // tslint:disable-next-line:max-line-length
-    return this.http.post<any>('https://dev.dwp.firstqa.com/server/user/api/v7/auth/login.json', formData, { withCredentials: true, responseType: 'text' as 'json' });
+    //Login API 
+    return this.http.post<any>(config[0]["loginAPI"], formData, { withCredentials: true, responseType: 'text' as 'json' });
   }
   getProfileInfo() {
     // tslint:disable-next-line:max-line-length
