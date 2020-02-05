@@ -1,5 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
@@ -34,6 +34,7 @@ import { ToastrModule } from 'ngx-toastr';
     RouterModule.forRoot(routes, { useHash: true })
   ],
   providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

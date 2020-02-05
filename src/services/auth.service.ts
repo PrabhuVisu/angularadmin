@@ -22,7 +22,7 @@ export class AuthenticationService {
       // tslint:disable-next-line:max-line-length
       .append('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Access-Control-Allow-Origin, Access-Control-Request-Method');
     // tslint:disable-next-line:max-line-length
-    return this.http.post<any>('https://dev.dwp.firstqa.com/server/user/api/v6.6/auth/login.json', formData, { withCredentials: true, responseType: 'text' as 'json' });
+    return this.http.post<any>('https://dev.dwp.firstqa.com/server/user/api/v7/auth/login.json', formData, { withCredentials: true, responseType: 'text' as 'json' });
   }
   getProfileInfo() {
     // tslint:disable-next-line:max-line-length

@@ -41,5 +41,11 @@
                 <span class="hide-menu">Tables</span>
             </a>
         </li>
+        <li>
+            <a  [routerLink]="['/loginpage']" [routerLinkActive]="['active']" (click)="onLoggedout()">
+                <i class="fa fa-bars"></i>
+                <span class="hide-menu">Log Out</span>
+            </a>
+        </li>
     </ul>
 </div>

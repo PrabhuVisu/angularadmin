@@ -12,4 +12,10 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
   }
 
+  onLoggedout() {
+    localStorage.removeItem('isLoggedin');
+    localStorage.clear();
+    console.log('User Logged Out..!');
+  }
+
 }
