@@ -12,6 +12,7 @@ import { NavigationComponent } from "./shared/navigation/navigation.component";
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { SubmitWorkflowComponent } from './submit-workflow/submit-workflow.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ToastrModule } from 'ngx-toastr';
     HeaderComponent,
     LeftNavTemplateComponent,
     NavigationComponent,
-    LoginComponent
+    LoginComponent,
+    SubmitWorkflowComponent
   ],
   imports: [
     ToastrModule.forRoot(),
