@@ -10,6 +10,7 @@ export class NavigationComponent implements OnInit {
   role: string;
   email: string;
   companyname: string;
+  loginname: string;
 
   constructor() { }
 
@@ -18,6 +19,7 @@ export class NavigationComponent implements OnInit {
     this.role = localStorage.getItem('role');
     this.email = localStorage.getItem('email');
     this.companyname = localStorage.getItem('companyname');
+    this.loginname = localStorage.getItem('loginName');
   }
 
   onLoggedout() {
