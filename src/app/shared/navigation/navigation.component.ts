@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
+  username: string;
+  role: string;
+  email: string;
+  companyname: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.username = localStorage.getItem('username');
+    this.role = localStorage.getItem('role');
+    this.email = localStorage.getItem('email');
+    this.companyname = localStorage.getItem('companyname');
   }
 
   onLoggedout() {

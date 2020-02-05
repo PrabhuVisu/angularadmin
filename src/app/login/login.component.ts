@@ -29,9 +29,10 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('username', username);
       localStorage.setItem('password', password);
       localStorage.setItem('isLoggedin', 'true');
-      localStorage.setItem('firstname', temp.Items[0].firstName );
+      localStorage.setItem('username', temp.Items[0].firstName+' '+temp.Items[0].lastName);
       localStorage.setItem('role', temp.Items[0].roleName );
       localStorage.setItem('email', temp.Items[0].emailId1 );
+      localStorage.setItem('companyname', temp.Items[0].companyName);
       localStorage.setItem('id', temp.Items[0].id );
       localStorage.setItem('deptId', temp.Items[0].departmentId );
       localStorage.setItem('loginName', temp.Items[0].loginName );
@@ -39,12 +40,15 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/dashboard']);
       } else if (data.search('SD205') !== -1) {
         this.toastr.error('Login name or password is wrong');
+        alert('Login name or password is wrong');
 
       } else if (data.search('SD394') !== -1) {
         this.toastr.error('User Account Locked');
+        alert('User Account Locked');
 
       } else if (data.search('SD401') !== -1) {
         this.toastr.error('Not Authorized');
+        alert('Not Authorized');
 
       } else {
         console.log('User Blocked');
